@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Mod id="e041005f-e883-4446-9461-73279f93804a">
     <Properties>
-        <Name>Mitch Jump Start (Beta)</Name>
+        <Name>Mitchs Quickstart Mod (MiQS)</Name>
         <Teaser/>
         <Description>
-            Start with more settlers builders and scouts. You can choose the number at the beginning of your game in the configuration screen. Version 1.0.
+            Start with more settlers, builders and scouts. You can choose the number at the beginning of your game in the configuration screen. Version 1.0.
         </Description>
         <Authors>Mitch</Authors>
         <ShowInBrowser>Show</ShowInBrowser>

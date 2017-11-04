@@ -3,9 +3,9 @@
 	<Parameters>
 
 		<!-- domain could also be int/SettlersCountRange but we want to use the sliders -->
-		<Row ParameterId="NumberOfAdditionalSettlers" Name="I18N_NUMBER_OF_ADDITIONAL_SETTLERS_NAME" Description="I18N_NUMBER_OF_ADDITIONAL_SETTLERS_DESCRIPTION" Domain="SettlersCountRange" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="NumberOfAdditionalSettlers" GroupId="AdvancedOptions" Hash="0" SortIndex="2005" />
-		<Row ParameterId="NumberOfAdditionalBuilders" Name="I18N_NUMBER_OF_ADDITIONAL_BUILDERS_NAME" Description="I18N_NUMBER_OF_ADDITIONAL_BUILDERS_DESCRIPTION" Domain="BuildersCountRange" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="NumberOfAdditionalBuilders" GroupId="AdvancedOptions" Hash="0" SortIndex="2006" />
-		<Row ParameterId="NumberOfAdditionalScouts" Name="I18N_NUMBER_OF_ADDITIONAL_SCOUTS_NAME" Description="I18N_NUMBER_OF_ADDITIONAL_SCOUTS_DESCRIPTION" Domain="ScoutsCountRange" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="NumberOfAdditionalScouts" GroupId="AdvancedOptions" Hash="0" SortIndex="2007" />
+		<Row ParameterId="NumberOfAdditionalSettlers" Name="I18N_NUMBER_OF_ADDITIONAL_SETTLERS_NAME" Description="I18N_NUMBER_OF_ADDITIONAL_SETTLERS_DESCRIPTION" Domain="SettlersCountRange" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="NumberOfAdditionalSettlers" GroupId="AdvancedOptions" Hash="0" SortIndex="2900" />
+		<Row ParameterId="NumberOfAdditionalBuilders" Name="I18N_NUMBER_OF_ADDITIONAL_BUILDERS_NAME" Description="I18N_NUMBER_OF_ADDITIONAL_BUILDERS_DESCRIPTION" Domain="BuildersCountRange" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="NumberOfAdditionalBuilders" GroupId="AdvancedOptions" Hash="0" SortIndex="2901" />
+		<Row ParameterId="NumberOfAdditionalScouts" Name="I18N_NUMBER_OF_ADDITIONAL_SCOUTS_NAME" Description="I18N_NUMBER_OF_ADDITIONAL_SCOUTS_DESCRIPTION" Domain="ScoutsCountRange" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="NumberOfAdditionalScouts" GroupId="AdvancedOptions" Hash="0" SortIndex="2902" />
 
 	</Parameters>
 	
