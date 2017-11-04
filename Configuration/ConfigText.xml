@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+	
+	<!-- New entries -->
+	<Replace Tag="I18N_NUMBER_OF_ADDITIONAL_SETTLERS_NAME" language="en">
+		<Text>More settlers</Text>
+	</Replace>
+	<Replace Tag="I18N_NUMBER_OF_ADDITIONAL_SETTLERS_DESC" language="en">
+		<Text>The number of additional settlers all players will get at the start of the game.</Text>
+	</Replace>
+
+	  <Replace Tag="I18N_NUMBER_OF_ADDITIONAL_BUILDERS_NAME" language="en">
+		  <Text>More builders</Text>
+	  </Replace>
+	  <Replace Tag="I18N_NUMBER_OF_ADDITIONAL_BUILDERS_DESC" language="en">
+		  <Text>The number of additional builders all players will get at the start of the game.</Text>
+	  </Replace>
+
+	  <Replace Tag="I18N_NUMBER_OF_ADDITIONAL_SCOUTS_NAME" language="en">
+		  <Text>More scouts</Text>
+	  </Replace>
+	  <Replace Tag="I18N_NUMBER_OF_ADDITIONAL_SCOUTS_DESC" language="en">
+		  <Text>The number of additional scouts all players will get at the start of the game.</Text>
+	  </Replace>
+
+  </LocalizedText>
+</GameData>

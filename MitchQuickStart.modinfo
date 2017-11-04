@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="e041005f-e883-4446-9461-73279f93804a">
+    <Properties>
+        <Name>Mitch Jump Start (Beta)</Name>
+        <Teaser/>
+        <Description>
+            Start with more settlers builders and scouts. You can choose the number at the beginning of your game in the configuration screen. Version 1.0.
+        </Description>
+        <Authors>Mitch</Authors>
+        <ShowInBrowser>Show</ShowInBrowser>
+        <EnabledByDefault>1</EnabledByDefault>
+        <EnabledAtStartup>1</EnabledAtStartup>
+    </Properties>
+    <InGameActions>
+        <AddGameplayScripts id="MitchJumpStart">
+            <File>Data/Mitch_JumpStart.lua</File>
+        </AddGameplayScripts>
+    </InGameActions>
+    <FrontEndActions>
+        <UpdateDatabase id="MIQS_SETTINGS">
+            <File>Configuration/Config.xml</File>
+        </UpdateDatabase>
+        <UpdateText id="MIQS_SETTINGS_TEXTS">
+            <File>Configuration/ConfigText.xml</File>
+            <File>Configuration/ConfigText_de.xml</File>
+			<File>Configuration/ConfigText_de_DE.xml</File>
+        </UpdateText>
+    </FrontEndActions>
+        
+    <Files>
+        <File>Data/Mitch_JumpStart.lua</File>
+        <File>Configuration/Config.xml</File>
+        <File>Configuration/ConfigText.xml</File>
+		<File>Configuration/ConfigText_de.xml</File>
+        <File>Configuration/ConfigText_de_DE.xml</File>
+    </Files>
+</Mod>

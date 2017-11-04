@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+  <LocalizedText>
+	
+	<!-- New entries -->
+	<Replace Tag="I18N_NUMBER_OF_ADDITIONAL_SETTLERS_NAME" language="de_DE">
+		<Text>Mehr Siedler</Text>
+	</Replace>
+	<Replace Tag="I18N_NUMBER_OF_ADDITIONAL_SETTLERS_DESC" language="de_DE">
+		<Text>Die Anzahl der zusätzlichen Siedler, die alle Spieler zu Beginn des Spiels erhalten.</Text>
+	</Replace>
+
+	  <Replace Tag="I18N_NUMBER_OF_ADDITIONAL_BUILDERS_NAME" language="de_DE">
+		  <Text>Mehr Arbeiter</Text>
+	  </Replace>
+	  <Replace Tag="I18N_NUMBER_OF_ADDITIONAL_BUILDERS_DESC" language="de_DE">
+		  <Text>Die Anzahl der zusätzlichen Arbeiter, die alle Spieler zu Beginn des Spiels erhalten.</Text>
+	  </Replace>
+
+	  <Replace Tag="I18N_NUMBER_OF_ADDITIONAL_SCOUTS_NAME" language="de_DE">
+		  <Text>Mehr Späher</Text>
+	  </Replace>
+	  <Replace Tag="I18N_NUMBER_OF_ADDITIONAL_SCOUTS_DESC" language="de_DE">
+		  <Text>Die Anzahl der zusätzlichen Späher, die alle Spieler zu Beginn des Spiels erhalten.</Text>
+	  </Replace>
+
+  </LocalizedText>
+</GameData>

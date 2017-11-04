@@ -1,0 +1,25 @@
+<GameInfo>
+
+	<Parameters>
+
+		<!-- domain could also be int/SettlersCountRange but we want to use the sliders -->
+		<Row ParameterId="NumberOfAdditionalSettlers" Name="I18N_NUMBER_OF_ADDITIONAL_SETTLERS_NAME" Description="I18N_NUMBER_OF_ADDITIONAL_SETTLERS_DESCRIPTION" Domain="SettlersCountRange" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="NumberOfAdditionalSettlers" GroupId="AdvancedOptions" Hash="0" SortIndex="2005" />
+		<Row ParameterId="NumberOfAdditionalBuilders" Name="I18N_NUMBER_OF_ADDITIONAL_BUILDERS_NAME" Description="I18N_NUMBER_OF_ADDITIONAL_BUILDERS_DESCRIPTION" Domain="BuildersCountRange" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="NumberOfAdditionalBuilders" GroupId="AdvancedOptions" Hash="0" SortIndex="2006" />
+		<Row ParameterId="NumberOfAdditionalScouts" Name="I18N_NUMBER_OF_ADDITIONAL_SCOUTS_NAME" Description="I18N_NUMBER_OF_ADDITIONAL_SCOUTS_DESCRIPTION" Domain="ScoutsCountRange" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="NumberOfAdditionalScouts" GroupId="AdvancedOptions" Hash="0" SortIndex="2007" />
+
+	</Parameters>
+	
+	<Queries>
+		<Row QueryId="SettlersCountRange" SQL="SELECT 'SettlersCountRange' AS Domain, 0 AS MinimumValue, 5 AS MaximumValue LIMIT 1" />
+		<Row QueryId="BuildersCountRange" SQL="SELECT 'BuildersCountRange' AS Domain, 0 AS MinimumValue, 2 AS MaximumValue LIMIT 1" />
+		<Row QueryId="ScoutsCountRange" SQL="SELECT 'ScoutsCountRange' AS Domain, 0 AS MinimumValue, 2 AS MaximumValue LIMIT 1" />
+		<!--<Row QueryId="SettlersCountRange" SQL="SELECT 'SettlersCountRange' AS Domain, ?1 AS MinimumValue, ?2 AS MaximumValue LIMIT 1" />-->
+	</Queries>
+
+	<DomainRangeQueries>
+		<Row QueryId="SettlersCountRange" />
+		<Row QueryId="BuildersCountRange" />
+		<Row QueryId="ScoutsCountRange" />
+	</DomainRangeQueries>
+	
+</GameInfo>
