@@ -1,1 +1,1 @@
-# civ6-quickstart-mode
+# civ6-quickstart-mod
