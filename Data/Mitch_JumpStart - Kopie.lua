@@ -13,34 +13,27 @@ function OnPlayerTurnActivated(player, bIsFirstTime)
 
 	if currentTurn == GameConfiguration.GetStartTurn() then
 		local pPlayer = Players[player]
-				
-		if pPlayer:IsMajor() or pPlayer:isHuman() then
-		
-			-- search for the settler and use its location
-			playerUnits = pPlayer:GetUnits()
-			for i, unit in playerUnits:Members() do
-				local unitTypeName = UnitManager.GetTypeName(unit)
-				if "LOC_UNIT_SETTLER_NAME" == unitTypeName then
-					SpawnTurn = 1;
-					unitPlot = Map.GetPlot(unit:GetX(), unit:GetY());		
-				end
+		playerUnits = pPlayer:GetUnits()
+		for i, unit in playerUnits:Members() do
+			local unitTypeName = UnitManager.GetTypeName(unit)
+			if "LOC_UNIT_SETTLER_NAME" == unitTypeName then
+				SpawnTurn = 1;
+				unitPlot = Map.GetPlot(unit:GetX(), unit:GetY());		
 			end
-			
-			if SpawnTurn == 1 then
-				local lastPlot = unitPlot;
-				
-				lastPlot = AddSettlers(lastPlot, playerUnits)
-				lastPlot = AddBuilders(lastPlot, playerUnits)
-				lastPlot = AddScouts(lastPlot, playerUnits)
-			end
-		
 		end
-
+		
+		if SpawnTurn == 1 then
+			local lastPlot = unitPlot;
+			
+			lastPlot = AddSettlers(numSettlers, lastPlot)
+			lastPlot = AddBuilders(numBuilders, lastPlot)
+			lastPlot = AddScouts(numScouts, lastPlot)
+		end
 	end
 	
 end
 
-function AddSettlers(plot, playerUnits)
+function AddSettlers(plot)
 	local lastPlot = plot;
 	local numberOf = 0;
 		
@@ -51,20 +44,19 @@ function AddSettlers(plot, playerUnits)
 	if numberOf > 0 then
 		for i = 1, numberOf do	
 			for direction = 1, DirectionTypes.NUM_DIRECTION_TYPES - 1, 1 do
-				--adjacentPlot = Map.GetAdjacentPlot(lastPlot:GetX(), lastPlot:GetY(), direction);
-				adjacentPlot = lastPlot;
+				adjacentPlot = Map.GetAdjacentPlot((lastPlot:GetX() ), lastPlot:GetY(), direction);
 				if (adjacentPlot ~= nil) and not (adjacentPlot:IsWater() or adjacentPlot:IsImpassable()) then
 					break		
 				end
 			end
-			pUnit = playerUnits:Create(iSettler, adjacentPlot:GetX(), adjacentPlot:GetY())	
+			pUnit2 = playerUnits:Create(iSettler, adjacentPlot:GetX(), adjacentPlot:GetY())	
 			lastPlot = Map.GetPlot(pUnit:GetX(), pUnit:GetY());
 		end	
 	end
 	return lastPlot;
 end
 
-function AddBuilders(plot, playerUnits)
+function AddBuilders(plot)
 	local lastPlot = plot;
 	local numberOf = 0;
 
@@ -75,20 +67,19 @@ function AddBuilders(plot, playerUnits)
 	if numberOf > 0 then
 		 for i = 1, numberOf do
 			for direction = 1, DirectionTypes.NUM_DIRECTION_TYPES - 1, 1 do
-				--adjacentPlot = Map.GetAdjacentPlot(lastPlot:GetX(), lastPlot:GetY(), direction);
-				adjacentPlot = lastPlot;
+				adjacentPlot = Map.GetAdjacentPlot(lastPlot:GetX(), lastPlot:GetY(), direction);
 				if (adjacentPlot ~= nil) and not (adjacentPlot:IsWater() or adjacentPlot:IsImpassable()) then
 					break		
 				end
 			end
-			pUnit = playerUnits:Create(iBuilder, adjacentPlot:GetX(), adjacentPlot:GetY())
+			pUnit3 = playerUnits:Create(iBuilder, lastPlot:GetX(), lastPlot:GetY())
 			lastPlot = Map.GetPlot(pUnit:GetX(), pUnit:GetY());
 		end
 	end
 	return lastPlot;
 end
 
-function AddScouts(plot, playerUnits)
+function AddScouts(plot)
 	local lastPlot = plot;
 	local numberOf = 0;
 	
@@ -99,13 +90,12 @@ function AddScouts(plot, playerUnits)
     if numberOf > 0 then
         for i = 1, numberOf do
             for direction = 1, DirectionTypes.NUM_DIRECTION_TYPES - 1, 1 do
-                --adjacentPlot = Map.GetAdjacentPlot(lastPlot:GetX(), lastPlot:GetY(), direction);
-				adjacentPlot = lastPlot;
+                adjacentPlot = Map.GetAdjacentPlot((lastPlot:GetX() + 1), lastPlot:GetY(), direction);
                 if (adjacentPlot ~= nil) and not (adjacentPlot:IsWater() or adjacentPlot:IsImpassable()) then
                    break		
 				end
 			end
-			pUnit = playerUnits:Create(iScout, adjacentPlot:GetX(), adjacentPlot:GetY())
+			pUnit = playerUnits:Create(iScout, unitPlot:GetX(), unitPlot:GetY())
 			lastPlot = Map.GetPlot(pUnit:GetX(), pUnit:GetY());
         end
     end
@@ -115,7 +105,7 @@ end
 			
 
 function Initialize()
-    --Events.LocalPlayerChanged.Add(OnPlayerTurnActivated);
+    Events.LocalPlayerChanged.Add(OnPlayerTurnActivated);
     Events.PlayerTurnActivated.Add(OnPlayerTurnActivated);
 end
 
