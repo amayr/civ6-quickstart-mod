@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Default</Configuration>
+    <Name>Mitchs QuickStart Mod (MiQS)</Name>
+    <Guid>b56a72fa-402c-4b04-b868-35d32e21aa69</Guid>
+    <ProjectGuid>7769e63d-13fd-48c9-8158-718d1a39cc4c</ProjectGuid>
+    <ModVersion>2</ModVersion>
+    <Teaser>Start with more settlers, builders and scouts. You can choose the number at the beginning of your game in the configuration scr</Teaser>
+    <Description>Start with more settlers, builders and scouts. You can choose the number at the beginning of your game in the configuration screen. Version 1.0.1.</Description>
+    <Authors>Mitch</Authors>
+    <SpecialThanks>Gedemon, Mynex</SpecialThanks>
+    <AffectsSavedGames>false</AffectsSavedGames>
+    <SupportsSinglePlayer>true</SupportsSinglePlayer>
+    <SupportsMultiplayer>true</SupportsMultiplayer>
+    <SupportsHotSeat>true</SupportsHotSeat>
+    <AssemblyName>MiQS</AssemblyName>
+    <RootNamespace>MiQS</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Configuration\Config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Configuration\ConfigText.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Configuration\ConfigText_de.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Configuration\ConfigText_de_DE.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Data\Mitch_JumpStart.lua">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MitchQuickStart.modinfo">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration" />
+    <Folder Include="Data" />
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)Civ6.targets" />
+</Project>
