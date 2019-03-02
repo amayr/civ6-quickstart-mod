@@ -115,11 +115,7 @@ end
 			
 
 function Initialize()
-    --Events.PlayerTurnActivated.Add(OnPlayerTurnActivated);
 	GameEvents.PlayerTurnStarted.Add(OnPlayerTurnActivated);
-
-    --Events.LocalPlayerChanged.Add(OnPlayerTurnActivated);
-	--Events.LocalPlayerTurnBegin.Add(OnPlayerTurnActivated);
 end
 
 Initialize();
